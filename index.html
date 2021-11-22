@@ -53,14 +53,23 @@
             </div>            
         </header>
         <div id="slides">
-            <div class="mySlides">
+            <div class="mySlides fade">
                 <img src="./assets/img/slide/slider1.png" alt="" class="slide">
             </div>
-            <div class="mySlides">
+            <div class="mySlides fade">
                 <img src="./assets/img/slide/slider2.png" alt="" class="slide">
             </div>
-            <div class="mySlides">
+            <div class="mySlides fade">
                 <img src="./assets/img/slide/slider3.png" alt="" class="slide">
+            </div>
+            <!-- Nút điều khiển mũi tên-->
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            <!-- Nút tròn điều khiển slideshow-->
+            <div class="slide__click">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </div>
         <div id="content">
