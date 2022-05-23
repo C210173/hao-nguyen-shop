@@ -1,17 +1,20 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 /* header */
-.header__wrapper {
-}
+
 /* header main */
 .header__main {
-    max-width: 1200px;
-    margin: 0 calc((100% - 1200px)/2);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 100px;
+}
+
+.menu_btn {
+    display: none;
 }
 
 .header__logo {
@@ -29,7 +32,7 @@
 
 .search__btn {
     width: 50px;
-    height: 43px;
+    height: 42px;
     background-color: #409e73;
     border: 1px solid #409e73;
     border-radius: 0 4px 4px 0;
@@ -43,7 +46,7 @@
 
 .search__input {
     min-width: 300px;
-    height: 43px;
+    height: 42px;
     background-color: #d1e9cd;
     border: 1px solid #d1e9cd;
     border-right: 0px;
@@ -58,7 +61,8 @@
 }
 
 .header__cart {
-    height: 32px;
+    width: 84px;
+    height: 42px;
     background-color: #409e73;
     border: 1px solid #409e73;
     border-radius: 4px;
@@ -67,7 +71,7 @@
 
 .header__cart--title {
     color: #fff;
-    line-height: 32px;
+    line-height: 42px;
     padding: 0 4px;
     font-weight: 600;
 }
@@ -91,17 +95,16 @@
 
 /* header nav */
 .header__nav {
-    height: 60px;
+    display: block;
     background-color: #409e73;
 }
 
 .nav__list {
-    max-width: 1200px;
-    margin: 0 calc((100% - 1200px)/2);
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     padding: 0;
+    margin: 0;
     list-style: none;
 }
 
@@ -128,16 +131,13 @@
 
 /* slide */
 
-.mySlides {
-    display: none;
-}
-
 .slides {
     animation: fade 1s forwards;    
-    max-width: 1200px;
-    max-height: 500px;
     position: relative;
-    margin: 0 calc((100% - 1200px)/2);
+}
+
+.mySlides {
+    display: none;
 }
 
 .slide {
@@ -173,16 +173,16 @@
 .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
+  top: 446px;
+  width: 36px;
+  height: 60px;
+  padding: 8px;
   color: #538f49;
   font-weight: bold;
   font-size: 36px;
   transition: 0.6s ease;
   user-select: none;
-  margin: 0 calc((100% - 1300px)/2);
+  margin: 0 calc((100% - 1272px)/2);
   border-radius: 3px 0 0 3px;
 }
 
@@ -250,11 +250,7 @@
 
 .brand__list {
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
     padding: 0;
-    margin: 0 calc((100% - 1200px)/2);
 }
 
 .brand__item {
@@ -262,7 +258,7 @@
     height: 160px;
     border: solid 1px #888;
     border-radius: 2px;
-    margin: 0 18px;
+    margin: 6px auto;
 }
 
 .brand__item:hover {
@@ -285,10 +281,6 @@
 }
 
 .product__list {
-    max-width: 1200px;
-    margin: 0 calc((100% - 1200px)/2);
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .product__item-sale {
@@ -328,7 +320,7 @@
     height: 420px;
     border: solid 1px #888;
     border-radius: 2px;
-    margin: 20px 8px;
+    margin: 8px 0;
     position: relative;
     cursor: pointer;
 }
@@ -391,11 +383,7 @@
 }
 
 .opinion__list {
-    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 calc((100% - 1200px)/2);
 }
 
 .opinion__item {
@@ -434,9 +422,7 @@
 }
 
 .footer__main {
-    max-width: 1200px;
     padding: 50px 0;
-    margin: 0 calc((100% - 1200px)/2);
     display: flex;
     justify-content: space-between;
 }
@@ -722,72 +708,6 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     text-overflow: ellipsis;
-}
-
-
-
-
-/* reposive */
-
-/* PC: width >= 1024px */
-@media only screen and (min-width: 1024px) {
-    
-
-}
-
-/* Tablet & mobile */
-@media only screen and (max-width: 1024px) {
-
-}
-
-/* Tablet: width >= 740px and width < 1024px */
-@media only screen and (min-width: 740px) and (max-width: 1023px) {
-    .search__input {
-        min-width: 200px;
-    }
-    .header__right {
-        margin-left: 30px;
-    }
-    .header__hotline {
-        display: none;
-    }
-    .nav__list {
-        margin: 0;
-    }
-    .nav__item-link {
-        width: 170px;
-    }
-    .slide {
-        height: 470px;
-    }
-    .opinion__list,
-    .footer__main,
-    .product__list,
-    .brand__list {
-        /* max-width: 1000px;
-        margin: 0 calc((100% - 1000px)/2) */
-    }
-    .brand__list {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-    }
-
-    .brand__item {
-        width: 140px;
-        height: 140px;
-    }
-    .brand__img {
-        width: 130px;
-        height: 130px;
-    }
-    .product__item {
-        margin: 20px 25px;
-    }
-}
-
-/* mobile: width < 740px */
-@media only screen and (max-width: 740px) {
-
 }
 
 

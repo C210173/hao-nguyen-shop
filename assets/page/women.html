@@ -7,40 +7,46 @@
     <title>HAO NGUYEN SHOP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/grid.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
     <div id="main">
         <header id="haeder">
-            <div class="header__wrapper">
-                <div class="header__main">
-                    <!-- logo -->
-                    <div class="header__logo">
-                        <a href="#" class="logo__link">
-                            <img src="../img/logo/haonguyenlogo.png" alt="" class="logo__img">
-                        </a>
+            <div class="header__main grid wide">
+                <!-- menu mobile, table -->
+                <div class="menu_btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <!-- logo -->
+                <div class="header__logo">
+                    <a href="#" class="logo__link">
+                        <img src="../img/logo/haonguyenlogo.png" alt="" class="logo__img">
+                    </a>
+                </div>
+                <!-- search -->
+                <div class="header__search">
+                    <input type="search" name="" id="" class="search__input" placeholder="  Search... ">
+                    <button type="submit" class="search__btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <!-- right element -->
+                <div class="header__right">
+                    <div class="header__cart">
+                        <span class="header__cart--title">CART</span>
+                        <i class="fas fa-shopping-cart"></i>
                     </div>
-                    <!-- search -->
-                    <div class="header__search">
-                        <input type="search" name="" id="" class="search__input" placeholder="  Search... ">
-                        <button type="submit" class="search__btn">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                    <!-- right element -->
-                    <div class="header__right">
-                        <div class="header__cart">
-                            <span class="header__cart--title">CART</span>
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <div class="header__hotline">
-                            <i class="fas fa-phone"></i>
-                            <Span class="header__phone">HOTLINE: 070 0000 1111</Span>
-                        </div>
+                    <div class="header__hotline">
+                        <i class="fas fa-phone"></i>
+                        <Span class="header__phone">HOTLINE: 070 0000 1111</Span>
                     </div>
                 </div>
+            </div>
 
-                <div class="header__nav">
+            <div class="header__nav">
+                <div class="grid wide">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="../../index.html" class="nav__item-link">HOME</a></li>
                         <li class="nav__item"><a href="./beauty.html" class="nav__item-link">BEAUTY</a></li>
@@ -50,7 +56,7 @@
                         <li class="nav__item"><a href="./kids.html" class="nav__item-link">KIDS</a></li>
                     </ul>
                 </div>
-            </div>            
+            </div>          
         </header>
         
         <div id="content" class="content">
@@ -312,7 +318,7 @@
         </div>
 
         <div id="footer" class="footer__wrap">
-            <div class="footer__main">
+            <div class="footer__main grid wide row">
                 <div class="footer__contact">
                     <img src="../img/logo/haonguyenlogo.png" alt="" class="footer__logo logo__img">
                     <div class="footer__addrest">
@@ -390,5 +396,12 @@
         </div>
     </div>
 </body>
-<script src="./assets/js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+        $('.menu_btn').click(function(){
+            $('.header__nav').slideToggle();
+        })
+    })
+</script>
 </html>
